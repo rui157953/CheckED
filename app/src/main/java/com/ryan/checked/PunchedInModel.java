@@ -21,7 +21,7 @@ import java.util.List;
  * <p/>
  * Created by Ryan on 2016/11/10.
  */
-class PunchedInModel {
+class PunchedInModel implements IPunchedInModel {
     public PunchedInModel(Context context) {
         mOpenHelper =  new DatabaseHelper(context);
     }
@@ -35,8 +35,6 @@ class PunchedInModel {
     }
 
     private static final Handler sWorker = new Handler(sWorkerThread.getLooper());
-
-    private CheckedBean mCheckedBean;
 
     public void insertData(final CheckedBean mCheckedBean) {
 //        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
@@ -75,12 +73,6 @@ class PunchedInModel {
         }
         return beanList ;
     }
-
-    public interface Callbacks {
-        void startPunchedIn(CheckedBean CheckedBean);
-
-    }
-
 
     private DeferredHandler mHandler = new DeferredHandler();
 
