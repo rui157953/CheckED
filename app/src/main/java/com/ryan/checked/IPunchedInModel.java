@@ -12,5 +12,4 @@ interface IPunchedInModel {
      List<CheckedBean> queryData();
 
 
-
 }
