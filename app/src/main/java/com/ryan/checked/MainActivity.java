@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements IPunchedInView{
         }else{
             StringBuilder sb = new StringBuilder("");
             for (CheckedBean cb : checkedBeans) {
-                sb.append(cb.getData()).append("   ");
+                sb.append(cb.getData()).append(" -  ");
             }
             mTextView.setText(sb.toString());}
     }
